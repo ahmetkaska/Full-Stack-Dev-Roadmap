@@ -87,6 +87,7 @@ console.log("///////////////////////////////////////////////////////////////////
 
 // Simulate an API call and print the result to the console.
 
+/*
 const mockApiCallWithError = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -105,7 +106,83 @@ const fetchDataWithErrorHandling = async () => {
   }
 };
 
-//fetchDataWithErrorHandling();
+fetchDataWithErrorHandling(); */
+
+const getDataAsync = async (data) => {
+
+  let promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        if(typeof data === 'string'){
+          resolve(data)
+        }
+        else {
+          reject(new Error('Please enter a string value'));
+        }
+    }, 3000)
+  });
+
+  let response = await promise;
+
+  return response;
+
+}
+
+getDataAsync('Test Async')
+.then(data => new Promise((resolve, reject) => {
+    resolve(data + ' Await')
+}))
+.then(str => console.log(str))
+.catch(err => console.error(err))
+
+class RequestAsync {
+  async get(url){
+    
+    const response = await fetch(url);
+    const data = response.json();
+    return data;
+
+
+  }
+
+  async post(url, data) {
+    const response = await  fetch(url, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      }
+    })
+
+    const data2 = response.json();
+    return data2;
+  }
+
+  async put(url, data) {
+    const response = await  fetch(url, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+    })
+
+    const data3 = respomse.json();
+    return data3;
+
+  }
+}
+
+const requestAsync = new RequestAsync();
+requestAsync.get('https://jsonplaceholder.typicode.com/albums')
+.then((data) => {
+  console.log('Test Async Get');
+  console.log( data);
+}
+)
+.catch(err => console.error(err));
+
+
+console.log("///////////////////////////////////////////////////////////////////////////////////////////");
 
 
 // Promise (Request, Response, State of Promise (Pending, Resolve, Reject))
