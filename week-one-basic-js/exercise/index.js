@@ -398,3 +398,93 @@ req2.put('https://jsonplaceholder.typicode.com/albums/1', {
 })
 .catch(err => console.error(err));
 
+console.log("///////////////////////////////////////////////////////////////////////////////////////////");
+
+/* 2. Array Methods */
+
+// map()
+// It consists of a series of numbers: [2, 4, 6, 8]. Creates a new array by multiplying each number by two.
+
+let array = [2, 4, 6, 8];
+
+let newArray = array.map((item) => {
+    return item * 2;
+});
+
+console.log('New Array = ', newArray);
+
+// Capitalize each noun in a string: ["ahmet", "ayşe", "mehmet"].
+
+let names = ["ahmet", "ayşe", "mehmet"];
+
+capitalNames = names.map((item) => {
+      return item.toLocaleUpperCase();
+})
+
+console.log('Capital Names = ', capitalNames);
+
+// filter()
+// Select only even numbers in a series: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10].
+
+let naturalNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+let evenNumbers = naturalNumbers.filter((item) => {
+  if (item % 2 == 0) {
+    return item;
+  }
+})
+
+console.log('Even Numbers Series = ', evenNumbers);
+
+// Choose words longer than 5 letters in a string: ["apple", "pear", "cherry", "watermelon", "strawberry"].
+
+let fruitss =  ["apple", "pear", "cherry", "watermelon", "strawberry"];
+let newFruitss = fruitss.filter((item) => {
+  if (item.length > 5) {
+      return item;
+  }
+});
+
+console.log('Fruits more 5 digits = ', newFruitss);
+
+// reduce()
+// Add all the numbers in a series: [1, 2, 3, 4, 5].
+
+let series = [1, 2, 3, 4, 5];
+
+
+const sumNumbers = (a, b) => {
+  return a+b;
+}
+let sum = series.reduce(sumNumbers);
+console.log('Sum of Numbers = ', sum);
+
+// Find the largest number in a series: [12, 45, 7, 23, 56, 89, 2].
+
+let nums = [12, 45, 7, 23, 56, 89, 2];
+let largestNum = nums.reduce((max, current) => {
+  return current > max ? current : max  ;
+}, nums[0]);
+
+console.log('Largest Num = ', largestNum);
+
+// find()
+// Find the first odd number in a series: [5, 7, 8, 11, 15, 16].
+
+let numsArray =  [5, 7, 8, 11, 15, 16];
+
+let oddNumbers = []
+numsArray.find((item) => {
+    if(item %2 == 1) {
+        oddNumbers.push(item);
+    }
+})
+
+console.log('Odd Numbers = ', oddNumbers);
+
+// forEach()
+
+let animals = ["cat", "dog", "turtle", "rabbit"];
+animals.forEach((item) => {
+  console.log(item.toLocaleUpperCase());
+})
