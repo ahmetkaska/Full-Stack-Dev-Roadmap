@@ -1,0 +1,26 @@
+[
+    {
+        "brand" : "Mercedes",
+        "model" : 2017,
+        "price" : 3000,
+        "color" : "Black"
+    },
+    {
+        "brand" : "Bmw",
+        "model" : 2017,
+        "price" : 3200,
+        "color" : "Blue"
+    },
+    {
+        "brand" : "Opel",
+        "model" : 2017,
+        "price" : 1000,
+        "color" : "Yellow"
+    },
+    {
+        "brand" : "Volvo",
+        "model" : 2017,
+        "price" : 2000,
+        "color" : "Red"
+    }
+]
