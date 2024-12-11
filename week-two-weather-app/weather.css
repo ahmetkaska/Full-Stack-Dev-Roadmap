@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+#container{
+    display: block;
+    margin-top: 3%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2%;
+    width: 30%;
+    height: auto;
+    background: linear-gradient(-45deg,#4f64d9,#219cd9);
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+#header {
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+#search {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin-top: 3%;
+    padding: 5%;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.search-input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#search-city-txt {
+    width: 80%;
+    color: #333;
+    font-size: 1rem;
+    margin: 0 auto;
+    padding: 1rem 1rem;
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 90%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+}
+
+#search-city-btn {
+    margin-top: 5%;
+    width: 30%;
+    padding: 0.8rem 1.2rem;
+    background-color: rgb(255, 255, 255);
+    color: #333;
+    width: 40%;
+    border: none;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#search-city-btn:hover {
+    
+    transform: translateY(-1px); 
+}
+
+#content {
+   
+    padding: 5%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.city {
+    font-size: 2rem;
+}
+
+.temp {
+    font-size: 5rem;
+    font-weight: 500;
+}
+
+.desc {
+    font-size: 1.5rem;
+}
+
+.minmax {
+    font-size: 1.5rem;
+}
+
+
+/* Responsive */
+@media (max-width: 480px) {
+    /* Küçük ekranlar (telefonlar, dikey) için stil */
+    * {
+        font-size: 10px;
+    }
+    #container {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Orta büyüklükte ekranlar (tabletler, dikey) için stil */
+    * {
+        font-size: 15px;
+    }
+    #container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    /* Daha büyük ekranlar (tabletler, yatay veya küçük masaüstü cihazlar) için stil */
+    * {
+        font-size: 15px;
+    }
+    #container {
+        width: 50%;
+    }
+}
+
+
