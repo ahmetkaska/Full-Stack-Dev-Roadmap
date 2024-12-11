@@ -102,7 +102,7 @@
 
 /* Responsive */
 @media (max-width: 480px) {
-    /* Küçük ekranlar (telefonlar, dikey) için stil */
+  
     * {
         font-size: 10px;
     }
@@ -112,7 +112,7 @@
 }
 
 @media (max-width: 768px) {
-    /* Orta büyüklükte ekranlar (tabletler, dikey) için stil */
+    
     * {
         font-size: 15px;
     }
@@ -122,7 +122,7 @@
 }
 
 @media (max-width: 1024px) {
-    /* Daha büyük ekranlar (tabletler, yatay veya küçük masaüstü cihazlar) için stil */
+    
     * {
         font-size: 15px;
     }
