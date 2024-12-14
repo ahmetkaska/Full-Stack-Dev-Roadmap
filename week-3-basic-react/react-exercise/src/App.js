@@ -1,9 +1,24 @@
 import UserCard from "./components/UserCard";
-
+import { useState } from "react";
 
 function App() {
+  const [count, setCount] = useState(0);
+  const [mode, setMode] = useState('white');
+
+  const changeMode = () => {
+    setMode(prevMode => (prevMode === 'black' ? 'white' : 'black'));
+  };
+
   return (
-    <div className="App">
+    <div
+      className="App"
+      style={{
+        backgroundColor: mode,
+        color: mode === 'black' ? 'white' : 'black',
+        minHeight: '100vh',
+        padding: '20px'
+      }}
+    >
       <h1>Week Three</h1>
       <hr />
       <h4>Props Exercise</h4>
@@ -26,7 +41,7 @@ function App() {
         mail={'aydin@gmail.com'}
       />
 
-<UserCard
+      <UserCard
         id={3}
         name={'Ali'}
         surname={'Veli'}
@@ -34,8 +49,17 @@ function App() {
         number={'0000 000 00 02'}
         mail={'ali@gmail.com'}
       />
-    </div>
 
+      <hr />
+      <h4>State Exercise</h4>
+      <button onClick={() => setCount(prevCount => prevCount + 1)}>Arttir +</button>
+      <span style={{ margin: '0 10px' }}> {count} </span>
+      <button onClick={() => setCount(prevCount => prevCount - 1)}>Azalttir -</button>
+    
+
+      <h4>Change Mode</h4>
+      <button onClick={changeMode}>Change Mode (Current: {mode})</button>
+    </div>
   );
 }
 
